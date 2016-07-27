@@ -1,0 +1,26 @@
+﻿@model Aplicacion.Core.AlumnoDTO
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Crear</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    <table border="0">
+        <tr>
+            <td>Nombre</td>
+            <td>@Html.TextBoxFor(a => a.Nombre)</td>
+            <td>@Html.ValidationMessageFor(a => a.Nombre)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.FechaNacimiento)</td>
+            <td>@Html.TextBoxFor(a => a.FechaNacimiento)</td>
+            <td>@Html.ValidationMessageFor(a => a.FechaNacimiento)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Guardar" /></td>
+        </tr>
+    </table>
+}

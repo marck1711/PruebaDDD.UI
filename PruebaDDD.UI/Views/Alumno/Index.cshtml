@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Aplicacion.Core.AlumnoDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table border="0">
+    <tr>
+        <td>Nombre</td>
+        <td>Fecha Nacimiento</td>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.FechaNacimiento</td>
+            </tr>
+        }
+        }
+    
+</table>
